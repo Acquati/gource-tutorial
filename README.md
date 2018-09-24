@@ -82,13 +82,15 @@ ffmpeg -y -r 15 -f image2pipe -vcodec ppm -i gource.ppm -vcodec libx264 -preset 
 
 The gource.mp4 file will be generated in the directory of the project and can be moved to somewhere else, have fun!
 
-If the file gets too large, use ffmpeg to reduce the file size:
+If the file gets too large, use ffmpeg to reduce the file size, an output.mp4 file will be generated:
 
 ```
 ffmpeg -i gource.mp4 -c:v libx264 -crf 19 -level 3.1 -preset slow -tune film -filter:v scale=-1:720 -sws_flags lanczos -c:a libfdk_aac -vbr 5 output.mp4
 ```
 
-## References:
+## References
+
+https://superuser.com/questions/582198/how-can-i-get-high-quality-low-size-mp4s-like-the-lol-release-group
 
 http://tylerfrankenstein.com/code/install-gource-ubuntu-1010-visualize-git-repo
 
