@@ -19,11 +19,9 @@ Download the file gource-0.49.tar.gz at https://gource.io/
 Extract and open the directory:
 
 ```
-mkdir ~/Documents/gource
+tar -xvzf ~/Downloads/gource-0.49.tar.gz -C ~/Documents
 
-tar -xvzf ~/Downloads/gource-0.49.tar.gz -C ~/Documents/gource
-
-cd ~/Documents/gource
+cd ~/Documents/gource-0.49
 ```
 
 On the created directory, follow the commands to install and make gource command global:
