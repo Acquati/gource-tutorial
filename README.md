@@ -42,7 +42,7 @@ cd /usr/bin
 sudo ln -s /usr/local/gource/0.49/bin/gource
 ```
 
-## Visualization
+## Local Visualization
 
 Now that gource is installed, go to the project directory that have a **.git** file and run the command, lets see the project whit some nice gource options:
 
