@@ -82,6 +82,12 @@ ffmpeg -y -r 15 -f image2pipe -vcodec ppm -i gource.ppm -vcodec libx264 -preset 
 
 The gource.mp4 file will be generated in the directory of the project and can be moved to somewhere else, have fun!
 
+If the file gets too large, use ffmpeg to reduce the file size:
+
+```
+ffmpeg -i gource.mp4 -c:v libx264 -crf 19 -level 3.1 -preset slow -tune film -filter:v scale=-1:720 -sws_flags lanczos -c:a libfdk_aac -vbr 5 output.mp4
+```
+
 ## References:
 
 http://tylerfrankenstein.com/code/install-gource-ubuntu-1010-visualize-git-repo
