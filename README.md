@@ -4,7 +4,7 @@
 
 [![Gource in Bloom](https://img.youtube.com/vi/NjUuAuBcoqs/0.jpg)](http://www.youtube.com/watch?v=NjUuAuBcoqs)
 
-## Instalation
+## Installation
 
 ### Mac
 
@@ -50,9 +50,9 @@ Now that gource is installed, go to the project directory that have a **.git** f
 gource --max-files 1500 --key -f --highlight-users --filename-time 3 --output-framerate 25 -s 0.6 --multi-sampling --auto-skip-seconds .1
 ```
 
-## Installing ffmpeg
+## Install ffmpeg
 
-First, lets install [ffmpeg](https://www.ffmpeg.org/) to covert the video to **.mp4**
+First, lets install [ffmpeg](https://www.ffmpeg.org/) to covert the gource file to **.mp4**
 
 ### Mac
 
