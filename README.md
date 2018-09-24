@@ -62,7 +62,7 @@ brew install libvpx
 brew install ffmpeg --with-libvpx
 ```
 
-### Ubuntu
+### Linux
 
 ```
 sudo apt-get -y install ffmpeg
