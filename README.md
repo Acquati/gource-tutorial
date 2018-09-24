@@ -50,7 +50,7 @@ Now that gource is installed, go to the project directory that have a **.git** f
 gource --max-files 1500 --key -f --highlight-users --filename-time 3 --output-framerate 25 -s 0.6 --multi-sampling --auto-skip-seconds .1
 ```
 
-## Making a .mp4 video
+## installing ffmpeg
 
 First, lets install [ffmpeg](https://www.ffmpeg.org/) to covert the video to **.mp4**
 
@@ -67,6 +67,8 @@ brew install ffmpeg --with-libvpx
 ```
 sudo apt-get -y install ffmpeg
 ```
+
+## Making a .mp4 video
 
 Now we will generate a **gource.ppm** file from the currently visualization:
 
