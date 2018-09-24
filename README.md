@@ -1,6 +1,6 @@
-# Project development visualization whit Gource.io
+# Project development visualization whit [Gource](https://gource.io/)
 
-### Gource offers a great way to visualize the progress of your project versioned by Git.
+### [Gource](https://gource.io/) offers a great way to visualize the progress of your project versioned by [Git](https://git-scm.com/)
 
 [![Gource in Bloom](https://img.youtube.com/vi/NjUuAuBcoqs/0.jpg)](http://www.youtube.com/watch?v=NjUuAuBcoqs)
 
@@ -52,7 +52,7 @@ gource --max-files 1500 --key -f --highlight-users --filename-time 3 --output-fr
 
 ## Making a .mp4 video
 
-First, lets install ffmpeg to covert ower vídeo to .mp4
+First, lets install [ffmpeg](https://www.ffmpeg.org/) to covert ower video to .mp4
 
 ### Mac
 
@@ -93,5 +93,7 @@ https://github.com/acaudwell/Gource/wiki/Videos
 https://gist.github.com/qiaoxueshi/5910150
 
 https://www.ffmpeg.org/
+
+https://git-scm.com/
 
 https://gource.io/
