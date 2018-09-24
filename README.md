@@ -71,13 +71,13 @@ sudo apt-get -y install ffmpeg
 Now we will generate a gource.ppm file from ower currently visualization:
 
 ```
-gource --max-files 1000 --key -1280x720 --highlight-users --filename-time 3 --output-framerate 25 -s 0.6 --multi-sampling --auto-skip-seconds .1 --stop-at-end --hide mouse,progress -o gource.ppm
+gource --max-files 1000 --key -800x600 --highlight-users --filename-time 3 --output-framerate 25 -s 0.6 --multi-sampling --auto-skip-seconds .1 --stop-at-end --hide mouse,progress -o gource.ppm
 ```
 
 And then whit ffmpeg we will convert the gource.ppm file into gource.mp4 file:
 
 ```
-ffmpeg -y -r 25 -f image2pipe -vcodec ppm -i gource.ppm -vcodec libx264 -preset medium -pix_fmt yuv420p -crf 1 -threads 0 -bf 0 gource.mp4
+ffmpeg -y -r 15 -f image2pipe -vcodec ppm -i gource.ppm -vcodec libx264 -preset medium -pix_fmt yuv420p -crf 1 -threads 0 -bf 0 gource.mp4
 ```
 
 The gource.mp4 file will be generated in the directory of the project and can be moved to somewhere else, have fun!
