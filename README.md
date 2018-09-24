@@ -24,7 +24,7 @@ tar -xvzf ~/Downloads/gource-0.49.tar.gz -C ~/Documents
 cd ~/Documents/gource-0.49
 ```
 
-On the created directory, follow the commands to install and make gource command global:
+On the created directory, follow the commands to install and make **gource command global**:
 
 ```
 sudo apt-get -y update
@@ -44,7 +44,7 @@ sudo ln -s /usr/local/gource/0.49/bin/gource
 
 ## Visualization
 
-Now that gource is installed, go to a project directory that have a .git file and run the command, lets see the project whit some nice gource options:
+Now that gource is installed, go to the project directory that have a **.git** file and run the command, lets see the project whit some nice gource options:
 
 ```
 gource --max-files 1500 --key -f --highlight-users --filename-time 3 --output-framerate 25 -s 0.6 --multi-sampling --auto-skip-seconds .1
@@ -52,7 +52,7 @@ gource --max-files 1500 --key -f --highlight-users --filename-time 3 --output-fr
 
 ## Making a .mp4 video
 
-First, lets install [ffmpeg](https://www.ffmpeg.org/) to covert ower video to .mp4
+First, lets install [ffmpeg](https://www.ffmpeg.org/) to covert the video to **.mp4**
 
 ### Mac
 
@@ -68,21 +68,21 @@ brew install ffmpeg --with-libvpx
 sudo apt-get -y install ffmpeg
 ```
 
-Now we will generate a gource.ppm file from ower currently visualization:
+Now we will generate a **gource.ppm** file from the currently visualization:
 
 ```
 gource --max-files 1000 --key -800x600 --highlight-users --filename-time 3 --output-framerate 25 -s 0.6 --multi-sampling --auto-skip-seconds .1 --stop-at-end --hide mouse,progress -o gource.ppm
 ```
 
-And then whit ffmpeg we will convert the gource.ppm file into gource.mp4 file:
+And then whit **ffmpeg** we will convert the **gource.ppm** file into **gource.mp4** file:
 
 ```
 ffmpeg -y -r 15 -f image2pipe -vcodec ppm -i gource.ppm -vcodec libx264 -preset medium -pix_fmt yuv420p -crf 1 -threads 0 -bf 0 gource.mp4
 ```
 
-The gource.mp4 file will be generated in the directory of the project and can be moved to somewhere else, have fun!
+The **gource.mp4** file will be generated in the **directory of the project** and can be moved to somewhere else, have fun!
 
-If the file gets too large, use ffmpeg to reduce the file size, an output.mp4 file will be generated:
+If the file gets too large, use **ffmpeg** to reduce the file size, an **output.mp4** file will be generated:
 
 ```
 ffmpeg -i gource.mp4 -c:v libx264 -crf 19 -level 3.1 -preset slow -tune film -filter:v scale=-1:720 -sws_flags lanczos -c:a libfdk_aac -vbr 5 output.mp4
