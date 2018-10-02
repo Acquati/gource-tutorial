@@ -1,4 +1,4 @@
-# Project development visualization whit [Gource](https://gource.io/)
+# Project development visualization whth [Gource](https://gource.io/)
 
 ### [Gource](https://gource.io/) offers a great way to visualize the progress of your project versioned by [Git](https://git-scm.com/)
 
@@ -44,7 +44,7 @@ sudo ln -s /usr/local/gource/0.49/bin/gource
 
 ## Local Visualization
 
-Now that gource is installed, go to the project directory that have a **.git** file and run the command, lets see the project whit some nice gource options:
+Now that gource is installed, go to the project directory that have a **.git** file and run the command, lets see the project with some nice gource options:
 
 ```
 gource --max-files 1500 --key -f --highlight-users --filename-time 3 --output-framerate 25 -s 0.6 --multi-sampling --auto-skip-seconds .1
@@ -76,7 +76,7 @@ Now we will generate a **gource.ppm** file from the currently visualization:
 gource --max-files 1000 --key -800x600 --highlight-users --filename-time 3 --output-framerate 25 -s 0.6 --multi-sampling --auto-skip-seconds .1 --stop-at-end --hide mouse,progress -o gource.ppm
 ```
 
-And then whit **ffmpeg** we will convert the **gource.ppm** file into **gource.mp4** file:
+And then with **ffmpeg** we will convert the **gource.ppm** file into **gource.mp4** file:
 
 ```
 ffmpeg -y -r 15 -f image2pipe -vcodec ppm -i gource.ppm -vcodec libx264 -preset medium -pix_fmt yuv420p -crf 1 -threads 0 -bf 0 gource.mp4
