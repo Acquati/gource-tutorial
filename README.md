@@ -1,4 +1,4 @@
-# Project development visualization whth [Gource](https://gource.io/)
+# Project development visualization with [Gource](https://gource.io/)
 
 ### [Gource](https://gource.io/) offers a great way to visualize the progress of your project versioned by [Git](https://git-scm.com/)
 
